@@ -2,18 +2,18 @@
 
 opsman-configuration:
   azure:
-    subscription_id: ((azure_subscription_id))
-    resource_group: ((azure_resource_group))
-    tenant_id: ((azure_tenant_id))
-    client_id: ((azure_client_id))
-    client_secret: ((azure_client_secret))
+    subscription_id: ((azure.subscription_id))
+    resource_group: ((azure.resource_group))
+    tenant_id: ((azure.tenant_id))
+    client_id: ((azure.client_id))
+    client_secret: ((azure.client_secret))
     location: centralus
     container: opsmanagerimage                    # container for opsman image
     network_security_group: ops-manager-security-group
-    vpc_subnet: /subscriptions/((azure_subscription_id))/resourceGroups/((azure_resource_group))/providers/Microsoft.Network/virtualNetworks/sandbox-vnet/subnets/default
-    storage_account: ((azure_storage_account))                   # account name of container
-    storage_key:                  # account key of container
-    ssh_public_key:   # ssh key to access VM
+    vpc_subnet: /subscriptions/((azure.subscription_id))/resourceGroups/((azure.resource_group))/providers/Microsoft.Network/virtualNetworks/sandbox-vnet/subnets/default
+    storage_account: ((azure.storage_account))                   # account name of container
+    storage_key:                                                       # account key of container
+    ssh_public_key:                                                    # ssh key to access VM
     vm_name: ops-manager-vm                       # default: OpsManager-vm
     boot_disk_size: 100                           # default: 200
     cloud_name: AzureCloud                        # default: AzureCloud
@@ -21,5 +21,5 @@ opsman-configuration:
     # delete-vm: this flag is ignored. delete-vm infers disk type from vm info from azure cloud.
     use_unmanaged_disk: false
     # At least one IP address (public or private) needs to be assigned to the VM.
-    public_ip: 23.101.118.175
+    # public_ip: 23.101.118.175
     private_ip: 10.0.0.6
