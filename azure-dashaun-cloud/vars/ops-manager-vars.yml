@@ -9,10 +9,10 @@ azure:
   location: centralus
   container: opsmanagerimage                    # container for opsman image
   network_security_group: ops-manager-security-group
-  vpc_subnet: /subscriptions/((azure_subscription_id))/resourceGroups/((azure_resource_group))/providers/Microsoft.Network/virtualNetworks/sandbox-vnet/subnets/default
-  storage_account: ((azure_storage_account))                   # account name of container
-  storage_key:                   # account key of container
-  ssh_public_key:   # ssh key to access VM
+  vpc_subnet: /subscriptions/((azure_subscription_id))/resourceGroups/((azure_resource_group))/providers/Microsoft.Network/virtualNetworks/jumpbox/subnets/default
+  storage_account: ((azure_storage_account))    # account name of container
+  storage_key:                                  # account key of container
+  ssh_public_key: ((azure_ssh_key.public_key))  # ssh key to access VM
   vm_name: ops-manager-vm                       # default: OpsManager-vm
   boot_disk_size: 100                           # default: 200
   cloud_name: AzureCloud                        # default: AzureCloud
@@ -20,5 +20,5 @@ azure:
   # delete-vm: this flag is ignored. delete-vm infers disk type from vm info from azure cloud.
   use_unmanaged_disk: false
   # At least one IP address (public or private) needs to be assigned to the VM.
-  public_ip: 23.101.118.175
+  # public_ip: 23.101.118.175
   private_ip: 10.0.0.6

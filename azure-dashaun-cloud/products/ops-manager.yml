@@ -12,8 +12,8 @@ opsman-configuration:
     network_security_group: ops-manager-security-group
     vpc_subnet: /subscriptions/((azure.subscription_id))/resourceGroups/((azure.resource_group))/providers/Microsoft.Network/virtualNetworks/sandbox-vnet/subnets/default
     storage_account: ((azure.storage_account))                   # account name of container
-    storage_key:                                                       # account key of container
-    ssh_public_key:                                                    # ssh key to access VM
+    # storage_key:                                                       # account key of container
+    # ssh_public_key:                                                    # ssh key to access VM
     vm_name: ops-manager-vm                       # default: OpsManager-vm
     boot_disk_size: 100                           # default: 200
     cloud_name: AzureCloud                        # default: AzureCloud
