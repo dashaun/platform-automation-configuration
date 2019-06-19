@@ -1,0 +1,4 @@
+---
+
+username: ((opsman_admin.username))
+password: ((opsman_admin.password))
